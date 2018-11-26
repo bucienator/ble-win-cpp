@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blecpp", "blecpp.vcxproj", "{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Debug|x64.ActiveCfg = Debug|x64
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Debug|x64.Build.0 = Debug|x64
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Debug|x86.ActiveCfg = Debug|Win32
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Debug|x86.Build.0 = Debug|Win32
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Release|x64.ActiveCfg = Release|x64
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Release|x64.Build.0 = Release|x64
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Release|x86.ActiveCfg = Release|Win32
+		{0837A9B1-F41B-4EE7-BB92-F3C1EBC88745}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE673272-6A5C-470A-B697-B4A70BF4D9B5}
+	EndGlobalSection
+EndGlobal

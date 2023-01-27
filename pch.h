@@ -4,15 +4,19 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Devices.Bluetooth.h>
-#include <winrt/Windows.Devices.Enumeration.h>
-#include <winrt/Windows.Devices.Bluetooth.Advertisement.h>
-#include <winrt/Windows.Devices.Bluetooth.GenericAttributeProfile.h>
-#include <winrt/Windows.Storage.Streams.h>
+#include <condition_variable>
+#include <mutex>
+#include <winrt/windows.foundation.h>
+#include <winrt/windows.foundation.collections.h>
+#include <winrt/windows.devices.bluetooth.h>
+#include <winrt/windows.devices.enumeration.h>
+#include <winrt/windows.devices.bluetooth.advertisement.h>
+#include <winrt/windows.devices.bluetooth.genericattributeprofile.h>
+#include <winrt/windows.storage.streams.h>
 
 using namespace winrt;
 using namespace Windows::Foundation;
+using namespace Windows::Foundation::Collections;
 using namespace Windows::Devices::Bluetooth;
 using namespace Windows::Devices::Enumeration;
 using namespace Windows::Devices::Bluetooth::Advertisement;

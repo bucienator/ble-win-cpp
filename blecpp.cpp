@@ -7,13 +7,13 @@
 std::wstring GetDeviceName(uint64_t deviceAddr) {
 	BluetoothLEDevice dev = BluetoothLEDevice::FromBluetoothAddressAsync(deviceAddr).get();
 
-	auto gapServicesResult = dev.GetGattServicesForUuidAsync(GattServiceUuids::GenericAccess(), BluetoothCacheMode::Uncached).get();
+	GattDeviceServicesResult gapServicesResult = dev.GetGattServicesForUuidAsync(GattServiceUuids::GenericAccess(), BluetoothCacheMode::Uncached).get();
 	if (gapServicesResult.Status() == GattCommunicationStatus::Success) {
-		auto gapServices = gapServicesResult.Services();
+		IVectorView<GattDeviceService> gapServices = gapServicesResult.Services();
 		if (gapServices.Size() > 0) {
 			GattDeviceService genericAccessSvc = gapServices.GetAt(0);
 			if (genericAccessSvc) {
-				auto gapDeviceNameChrs = genericAccessSvc.GetCharacteristics(GattCharacteristicUuids::GapDeviceName());
+				IVectorView<GattCharacteristic> gapDeviceNameChrs = genericAccessSvc.GetCharacteristics(GattCharacteristicUuids::GapDeviceName());
 				if (gapDeviceNameChrs.Size() == 1) {
 					GattCharacteristic gapDeviceNameChr = gapDeviceNameChrs.GetAt(0);
 
@@ -106,7 +106,7 @@ int main()
 	GattDeviceServicesResult result = dev.GetGattServicesAsync(BluetoothCacheMode::Uncached).get();
 	if (result.Status() == GattCommunicationStatus::Success)
 	{
-		auto services = result.Services();
+		IVectorView<GattDeviceService> services = result.Services();
 		for (GattDeviceService service : services) {
 			auto uuid = service.Uuid();
 			std::wcout << L" Characteristic: " << ServiceToString(uuid) << std::endl;

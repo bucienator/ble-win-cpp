@@ -545,9 +545,9 @@ std::wstring AdvertisementDataTypeToString(uint8_t dataType)
 	{
 		return L"ShortenedLocalName";
 	}
-	if (dataType == BluetoothLEAdvertisementDataTypes::SlaveConnectionIntervalRange())
+	if (dataType == BluetoothLEAdvertisementDataTypes::PeripheralConnectionIntervalRange())
 	{
-		return L"SlaveConnectionIntervalRange";
+		return L"PeripheralConnectionIntervalRange ";
 	}
 	if (dataType == BluetoothLEAdvertisementDataTypes::TxPowerLevel())
 	{
